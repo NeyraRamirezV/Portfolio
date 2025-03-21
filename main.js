@@ -10,7 +10,7 @@ const swiper = new Swiper('.swiper-container', {
 // =============== SCROLLREVEAL INITIALIZATION ===============
 ScrollReveal({
     reset: true, // Reset animations on scroll
-    distance: '60px', // Distance to animate
+    distance: '60px', // Distance to animatee
     duration: 1000, // Animation duration
     delay: 200, // Delay before animation starts
 });
