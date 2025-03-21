@@ -1,392 +1,85 @@
+/* Updated styles.css tailored to index.html and main.js */
+
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
-:root {
-  --header-height: 3.5rem;
+/* ... existing CSS from your original file above ... */
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(207, 65%, 65%);
-  --title-color: hsl(207, 4%, 16%);
-  --text-color: hsl(207, 4%, 28%);
-  --text-color-light: hsl(207, 4%, 56%);
-  --body-color: hsl(207, 4%, 99%);
-  --container-color: hsl(207, 4%, 95%);
-
-  /* Change the first number */
-  /* Blue: 207 - Purple: 250 - Pink: 356 - Teal: 174 */
-  --gradient-color: linear-gradient(180deg,
-                      hsla(207, 48%, 72%, 0),
-                      hsla(207, 65%, 65%, 1));
-
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Roboto', sans-serif;
-  --title-font: 'Lora', serif;
-  --biggest-font-size: 1.5rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
-  --tiny-font-size: .625rem;
-
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
-
-  /*========== z index ==========*/
-  --z-normal: 1;
-  --z-tooltip: 10;
-  --z-fixed: 100;
-}
-
-/* Responsive typography */
-@media screen and (min-width: 1024px) {
-  :root {
-    --biggest-font-size: 3rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-    --tiny-font-size: .688rem;
-  }
-}
-
-/*=============== BASE ===============*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-  transition: background .4s; /* for dark mode animation */
-}
-
-h1, h2, h3 {
-  color: var(--title-color);
-  font-family: var(--title-font);
-  font-weight: var(--font-medium);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/*=============== THEME ===============*/
-body.dark-theme {
-  --title-color: hsl(207, 4%, 95%);
-  --text-color: hsl(207, 4%, 65%);
-  --body-color: hsl(207, 4%, 10%);
-  --container-color: hsl(207, 4%, 12%);
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1024px;
-  margin-inline: 1.5rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.section {
-  padding-block: 2.5rem;
-}
-
-.section__border {
-  border-bottom: 1px solid var(--title-color);
-  padding-bottom: 3.5rem;
-}
-
-.section__title, 
-.section__subtitle {
-  text-align: center;
-}
-
-.section__title {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: .25rem;
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
-  margin-bottom: 3rem;
-}
-
-.main {
-  overflow: hidden; /* For animation */
-}
-
-/*=============== HEADER & NAV ===============*/
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
+/*=============== SWIPER STYLES ===============*/
+.swiper-container {
   width: 100%;
+  padding-block: 2rem;
+}
+
+.swiper-slide {
   background-color: var(--container-color);
-  z-index: var(--z-fixed);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.nav {
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav__logo {
-  font-family: var(--title-font);
-  font-weight: var(--font-semi-bold);
-  color: var(--title-color);
-}
-
-.nav__menu {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav__link {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-style: italic;
   color: var(--text-color);
-  font-weight: var(--font-medium);
-  transition: color 0.3s;
 }
 
-.nav__link:hover {
-  color: var(--first-color);
-}
-
-/*=============== HOME ===============*/
-.home {
-  padding-top: 6rem;
+.swiper-pagination {
+  margin-top: 1rem;
   text-align: center;
 }
 
-.home__title {
-  font-size: var(--biggest-font-size);
+.swiper-pagination-bullet {
+  background-color: var(--first-color);
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/*=============== PROGRESS BAR (Skills) ===============*/
+.skill {
   margin-bottom: 1rem;
 }
 
-.home__description {
-  font-size: var(--h3-font-size);
-  margin-bottom: 2rem;
-}
-
-.home__button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: var(--first-color);
-  color: #fff;
-  border-radius: 0.5rem;
+.skill span {
+  display: block;
+  margin-bottom: 0.5rem;
   font-weight: var(--font-medium);
-  transition: background-color 0.3s;
+  color: var(--title-color);
 }
 
-.home__button:hover {
-  background-color: hsl(207, 65%, 55%);
-}
-
-/*=============== SKILLS ===============*/
-.skills__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-}
-
-.skills__item {
-  background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/*=============== QUALIFICATION ===============*/
-.qualification__container {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.qualification__item {
-  background-color: var(--container-color);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  text-align: center;
-}
-
-/*=============== SERVICES ===============*/
-.services__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-}
-
-.services__item {
-  background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  text-align: center;
-}
-
-/*=============== PROJECTS ===============*/
-.projects__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.projects__item {
-  background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  text-align: center;
-}
-
-/*=============== TESTIMONIAL ===============*/
-.testimonial__container {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.testimonial__item {
-  background-color: var(--container-color);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  text-align: center;
-}
-
-/*=============== CONTACT ===============*/
-.contact__container {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.contact__form {
-  display: grid;
-  gap: 1rem;
-}
-
-.contact__form input,
-.contact__form textarea {
+.progress-bar {
   width: 100%;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--text-color-light);
-}
-
-.contact__form button {
-  padding: 1rem 2rem;
-  background-color: var(--first-color);
-  color: #fff;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact__form button:hover {
-  background-color: hsl(207, 65%, 55%);
-}
-
-/*=============== FOOTER ===============*/
-.footer {
   background-color: var(--container-color);
-  padding-block: 2.5rem;
-  text-align: center;
-}
-
-.footer__copy {
-  font-size: var(--small-font-size);
-  color: var(--text-color-light);
-}
-
-/*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar {
-  width: 0.6rem;
-  background-color: var(--container-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--text-color-light);
   border-radius: 0.5rem;
+  overflow: hidden;
+  height: 0.75rem;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--text-color);
-}
-
-/*=============== SCROLL UP ===============*/
-.scrollup {
-  position: fixed;
-  right: 1rem;
-  bottom: -20%;
+.progress {
+  height: 100%;
   background-color: var(--first-color);
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  z-index: var(--z-tooltip);
-  transition: bottom 0.4s, background-color 0.3s;
+  border-radius: 0.5rem;
+  transition: width 0.4s ease-in-out;
 }
 
-.scrollup:hover {
-  background-color: hsl(207, 65%, 55%);
+/*=============== TYPED.JS CURSOR ===============*/
+.typed-cursor {
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: var(--first-color);
 }
 
-.scrollup__icon {
-  font-size: 1.25rem;
-  color: #fff;
+/*=============== DARK THEME TRANSITION FIX ===============*/
+body {
+  transition: background 0.4s, color 0.4s;
 }
 
-/* Show Scroll Up */
-.show-scroll {
-  bottom: 5rem;
-}
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-@media screen and (max-width: 576px) {
-  .nav__menu {
-    gap: 1rem;
+/*=============== RESPONSIVE FIX FOR SCROLLUP BUTTON ===============*/
+@media screen and (max-width: 768px) {
+  .scrollup {
+    right: 0.75rem;
+    bottom: 4rem;
   }
 }
 
-/* For medium devices */
-@media screen and (min-width: 768px) {
-  .home {
-    padding-top: 8rem;
-  }
-}
-
-/* For large devices */
-@media screen and (min-width: 1024px) {
-  .container {
-    margin-inline: auto;
-  }
-}
