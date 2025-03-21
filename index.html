@@ -7,22 +7,14 @@
     <meta name="keywords" content="portfolio, web development, design, Neyra Ramirez">
     <meta name="author" content="Neyra Ramirez">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
-
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <title>Responsive Portfolio - Neyra Ramirez</title>
 </head>
 <body>
-    <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">Neyra Ramirez</a>
@@ -36,35 +28,30 @@
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
-    <!--==================== MAIN ====================-->
     <main class="main">
-        <!--==================== HOME ====================-->
         <section class="home section" id="home">
             <div class="home__container container">
-                <h1 class="home__title">Hello, I'm Neyra Ramirez</h1>
+                <h1 class="home__title"><span id="typed"></span></h1>
                 <p class="home__description">A passionate web developer and designer.</p>
                 <a href="#contact" class="home__button">Get in Touch</a>
             </div>
         </section>
 
-        <!--==================== SKILLS ====================-->
         <section class="skills section" id="skills">
             <h2 class="section__title">Skills</h2>
             <div class="skills__container container">
                 <p class="skills__description">Here are some of my technical skills:</p>
-                <ul class="skills__list">
-                    <li class="skills__item">HTML & CSS</li>
-                    <li class="skills__item">JavaScript</li>
-                    <li class="skills__item">React</li>
-                    <li class="skills__item">UI/UX Design</li>
-                </ul>
+                <div class="skill"><span>HTML & CSS</span><div class="progress-bar"><div class="progress" style="width: 90%"></div></div></div>
+                <div class="skill"><span>JavaScript</span><div class="progress-bar"><div class="progress" style="width: 85%"></div></div></div>
+                <div class="skill"><span>React</span><div class="progress-bar"><div class="progress" style="width: 80%"></div></div></div>
+                <div class="skill"><span>UI/UX Design</span><div class="progress-bar"><div class="progress" style="width: 75%"></div></div></div>
             </div>
         </section>
 
-        <!--==================== QUALIFICATION ====================-->
         <section class="qualification section" id="qualification">
             <h2 class="section__title">Qualification</h2>
             <div class="qualification__container container">
@@ -76,7 +63,6 @@
             </div>
         </section>
 
-        <!--==================== SERVICES ====================-->
         <section class="services section" id="services">
             <h2 class="section__title">Services</h2>
             <div class="services__container container">
@@ -89,7 +75,6 @@
             </div>
         </section>
 
-        <!--==================== PROJECTS ====================-->
         <section class="projects section" id="projects">
             <h2 class="section__title">Projects</h2>
             <div class="projects__container container">
@@ -107,7 +92,6 @@
             </div>
         </section>
 
-        <!--==================== TESTIMONIAL ====================-->
         <section class="testimonial section">
             <h2 class="section__title">Testimonials</h2>
             <div class="testimonial__container container">
@@ -121,7 +105,6 @@
             </div>
         </section>
 
-        <!--==================== CONTACT ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title">Contact</h2>
             <div class="contact__container container">
@@ -136,25 +119,40 @@
         </section>
     </main>
 
-    <!--==================== FOOTER ====================-->
     <footer class="footer">
         <div class="footer__container container">
             <p class="footer__copy">&copy; 2023 Neyra Ramirez. All rights reserved.</p>
         </div>
     </footer>
 
-    <!--========== SCROLL UP ==========-->
     <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!--=============== SCROLLREVEAL ===============-->
     <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--=============== SWIPER JS ===============-->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        const toggle = document.getElementById("theme-toggle");
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-theme");
+        });
 
-    <!-- Custom JS -->
+        ScrollReveal().reveal('.section__title, .home__title, .skills__item, .project__item', {
+            origin: 'bottom',
+            distance: '50px',
+            duration: 1000,
+            delay: 100,
+            reset: true
+        });
+
+        var typed = new Typed('#typed', {
+            strings: ["Hello, I'm Neyra Ramirez", "Web Developer", "Data Enthusiast", "UI/UX Designer"],
+            typeSpeed: 60,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
