@@ -1,76 +1,157 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive portfolio of Neyra Ramirez">
+    <meta name="keywords" content="portfolio, web development, design, Neyra Ramirez">
+    <meta name="author" content="Neyra Ramirez">
 
-        
-        
-        <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" href="">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-        <title>Responsive portfolio Neyra Ramirez</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            
-        </header>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                
-            </section>
+    <title>Responsive Portfolio - Neyra Ramirez</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Neyra Ramirez</a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#qualification" class="nav__link">Qualification</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-                
-            </section>
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container">
+                <h1 class="home__title">Hello, I'm Neyra Ramirez</h1>
+                <p class="home__description">A passionate web developer and designer.</p>
+                <a href="#contact" class="home__button">Get in Touch</a>
+            </div>
+        </section>
 
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section" id="qualification">
-                
-            </section>
+        <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <div class="skills__container container">
+                <p class="skills__description">Here are some of my technical skills:</p>
+                <ul class="skills__list">
+                    <li class="skills__item">HTML & CSS</li>
+                    <li class="skills__item">JavaScript</li>
+                    <li class="skills__item">React</li>
+                    <li class="skills__item">UI/UX Design</li>
+                </ul>
+            </div>
+        </section>
 
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                
-            </section>
+        <!--==================== QUALIFICATION ====================-->
+        <section class="qualification section" id="qualification">
+            <h2 class="section__title">Qualification</h2>
+            <div class="qualification__container container">
+                <p class="qualification__description">My educational background and certifications:</p>
+                <ul class="qualification__list">
+                    <li class="qualification__item">Bachelor's in Computer Science</li>
+                    <li class="qualification__item">Certified Web Developer</li>
+                </ul>
+            </div>
+        </section>
 
-            <!--==================== PROJECTS ====================-->
-            <section class="projects section" id="projects">
-                
-            </section>
+        <!--==================== SERVICES ====================-->
+        <section class="services section" id="services">
+            <h2 class="section__title">Services</h2>
+            <div class="services__container container">
+                <p class="services__description">What I offer:</p>
+                <ul class="services__list">
+                    <li class="services__item">Web Development</li>
+                    <li class="services__item">UI/UX Design</li>
+                    <li class="services__item">SEO Optimization</li>
+                </ul>
+            </div>
+        </section>
 
-            <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
-                
-            </section>
+        <!--==================== PROJECTS ====================-->
+        <section class="projects section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <div class="projects__container container">
+                <p class="projects__description">Some of my recent work:</p>
+                <div class="projects__grid">
+                    <div class="project__item">
+                        <h3 class="project__title">Project 1</h3>
+                        <p class="project__description">A responsive website for a local business.</p>
+                    </div>
+                    <div class="project__item">
+                        <h3 class="project__title">Project 2</h3>
+                        <p class="project__description">An e-commerce platform built with React.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <!--==================== CONTACT ====================-->
-            <section class="contact section" id="contact">
-                
-            </section>
-        </main>
+        <!--==================== TESTIMONIAL ====================-->
+        <section class="testimonial section">
+            <h2 class="section__title">Testimonials</h2>
+            <div class="testimonial__container container">
+                <p class="testimonial__description">What my clients say:</p>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">"Neyra is an amazing developer!"</div>
+                        <div class="swiper-slide">"Highly recommend her services!"</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            
-        </footer>
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact</h2>
+            <div class="contact__container container">
+                <p class="contact__description">Let's work together!</p>
+                <form class="contact__form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__copy">&copy; 2023 Neyra Ramirez. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <!--========== SCROLL UP ==========-->
-        
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up"></i>
+    </a>
 
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src=""></script>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-        <!--=============== SWIPER JS ===============-->
-        <script src=""></script>
-        
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    </body>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
